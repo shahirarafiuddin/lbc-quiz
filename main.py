@@ -1,3 +1,4 @@
+import os
 from abc import ABC, abstractmethod
 
 
@@ -190,6 +191,10 @@ class Quiz:
     # display the quiz intro
     print(self.intro)
 
+    # Press enter to continue
+    input("Press enter to continue")
+    os.system("clear")
+
     # loop through each question in the quiz
     for question in self.questions:
       # display the question and prompt the user for an answer
@@ -204,7 +209,11 @@ class Quiz:
 
     # display the final score when the quiz is complete
     print("=== Results ===")
-    print(f"Your score is {self.score} out of {len(self.questions)}\n\n")
+    print(f"Your score is {self.score} out of {len(self.questions)}\n")
+
+    # press enter to continue
+    input("Press enter to continue")
+    os.system("clear")
 
 
 if __name__ == "__main__":
